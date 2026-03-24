@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cricket Scoreboard</title>
+</head>
+<body>
+
+<button onclick="loadData()">LOAD Cricket Data</button>
+
+<table border="1">
+    <thead>
+        <tr>
+            <th>Match</th>
+            <th>Team 1</th>
+            <th>Team 2</th>
+            <th>Score 1</th>
+            <th>Score 2</th>
+            <th>Result</th>
+        </tr>
+    </thead>
+    <tbody id="body"></tbody>
+</table>
+
+<script>
+function loadData() {
+
+    fetch("A2_Q1_2_score.json")
+        .then(res => {
+            if (!res.ok) throw new Error("File not found");
+            return res.json();
+        })
+        .then(data => {
+
+            let rows = "";
+
+            data.forEach(item => {
+                rows += `<tr>
+                    <td>${item.match}</td>
+                    <td>${item.team1}</td>
+                    <td>${item.team2}</td>
+                    <td>${item.score1}</td>
+                    <td>${item.score2}</td>
+                    <td>${item.result}</td>
+                </tr>`;
+            });
+
+            document.getElementById("body").innerHTML = rows;
+        })
+        .catch(err => {
+            console.log(err);
+            alert("Error loading data");
+        });
+}
+</script>
+
+</body>
+</html>
