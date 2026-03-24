@@ -17,7 +17,8 @@
 <script>
 function loadNews() {
 
-    axios.get("https://newsdata.io/api/1/latest") // replace with given API URL
+     // axios.get("https://newsdata.io/api/1/latest") 
+    axios.get("A2_Q2_2newsheadlines.json") 
         .then(function (response) {
 
             let data = response.data.articles;
