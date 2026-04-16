@@ -1,5 +1,8 @@
 package AssignmentQ15;
 
+// 18.Create a Sample class to understand generic assignments using “?
+// extendsSomeClass” , “? supersomeclass ” and “?”
+
 import java.util.*;
 
 public class GenericDemo {
