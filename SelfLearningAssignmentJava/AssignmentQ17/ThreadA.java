@@ -1,0 +1,13 @@
+package AssignmentQ17;
+
+public class ThreadA extends Thread {
+	
+	public void run()
+	{
+		for(int i=0;i<=5;i++)
+		{
+			System.out.println("Thread Class"+i);
+		}
+	}
+
+}
