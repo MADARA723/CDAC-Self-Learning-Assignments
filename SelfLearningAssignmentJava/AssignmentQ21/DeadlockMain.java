@@ -1,5 +1,6 @@
 package AssignmentQ21;
-
+//23.Create a Deadlock class to demonstrate deadlock in multithreading
+//environment.
 public class DeadlockMain {
 
     public static void main(String[] args) {
